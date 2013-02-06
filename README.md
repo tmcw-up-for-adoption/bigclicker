@@ -23,3 +23,13 @@ real keyboard events to the document.
 Designed to work with big, but it should work with any presentation system
 that looks at `keyCodes`, responds to arrow keys, and binds its `keydown`
 listener on `document`.
+
+### Why?
+
+Because my computer doesn't have one of those IR remote things, and when
+you a 'computer on a chair' situation at a meetup, being prone isn't conducive
+to rockin.
+
+Also, the slight bit of distrust you should have of a system strung
+together with websockets, nodejs, and incarnated browser events should add
+that bit of technical-fear that masks any social anxiety you happen to have.
