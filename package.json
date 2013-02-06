@@ -1,0 +1,22 @@
+{
+  "name": "bigclicker",
+  "version": "0.0.0",
+  "description": "a remote control for keyboard-driven web presentation systems like [big](https://github.com/tmcw/big). you can load it on your smartphone or ipad, click left or right, and it emits keyboard events with [happen](https://github.com/tmcw/happen) that turn pages for you.",
+  "main": "happen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmcw/bigclicker.git"
+  },
+  "author": "Tom MacWright",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "5adf969b1c062cb3615cd0b0f3920e689db1cfeb",
+  "dependencies": {
+    "express": "~3.1.0",
+    "socket.io": "~0.9.13"
+  }
+}
