@@ -7,11 +7,22 @@ pages for you.
 
 ![](http://farm9.staticflickr.com/8084/8450107093_798a368ffd_c.jpg)
 
-load it on a cell phone, run it as a server, include it in your page:
+load it on a cell phone, run it as a server, include it in your page.
+
+### Install
+
+    git clone https://github.com/tmcw/bigclicker.git
+    cd bigclicker
+    npm install
+    node server.js
+
+Include on your presentation page:
 
 ```html
 <script src='//localhost:3001/receive.js'></script>
 ```
+
+Then load it on your iPhone (create an ad-hoc network if necessary).
 
 ### How?
 
