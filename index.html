@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>bigclicker</title>
+        <!-- mobile devices -->
+        <meta name='viewport' content='initial-scale=1.0 maximum-scale=1.0'>
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        <style>
+            body {
+                margin:0;
+                padding:0;
+                font-family:'Courier', Arial, sans-serif;
+            }
+            a {
+                background:url(anim.gif) no-repeat;
+                background-position:center;
+                display:inline-block;
+                position:relative;
+                width:50%;
+                height:100%;
+                float:left;
+            }
+            a#a {
+                -webkit-transform:rotate(180deg);
+            }
+        </style>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <a id='a' href='#a'></a>
+        <a id='b' href='#b'></a>
+        <script>
+            var socket = io.connect('{abs}');
+            function go(dir) {
+                return function(e) {
+                    socket.emit('send', { dir: dir });
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            }
+            var a = document.getElementById('a'),
+                b = document.getElementById('b');
+            b.onclick = go(1);
+            a.onclick = go(-1);
+        </script>
+    </body>
+</html>
