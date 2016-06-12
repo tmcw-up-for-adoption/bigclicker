@@ -21,6 +21,12 @@ app.get('/anim.gif', function(req, res) {
     res.sendfile(__dirname + '/anim.gif');
 });
 
+app.get('/receive.js', function(req, res) {
+  fs.readFile(__dirname + '/receive.js', 'utf8', function(err, f) {
+      res.send(f.replace('{abs}', host(req)));
+  });
+});
+
 io.sockets.on('connection', function(socket) {
     socket.on('send', function(data) {
         socket.broadcast.emit('receive', data);
