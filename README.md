@@ -1,5 +1,7 @@
 ## bigclicker
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/bigclicker.svg)](https://greenkeeper.io/)
+
 a remote control for keyboard-driven web presentation systems like [big](https://github.com/tmcw/big).
 you can load it on your smartphone or ipad, click left or right, and it emits
 keyboard events with [happen](https://github.com/tmcw/happen) that turn
